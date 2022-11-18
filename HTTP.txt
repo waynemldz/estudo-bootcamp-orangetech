@@ -1,0 +1,46 @@
+Requisição HTTP
+
+URL: https://pokeapi.co/api/v2/pokemon?type=grass&name=i
+            ${IP}    / ${PATCH} = caminho de identificação do recurso
+
+Request Method: GET │ POST │ PUT │ DELETE
+
+o sinal de "?" indica que é o query, logo após tem os filtros
+type = grass
+name = i
+separados pelo simbolo "&"
+
+
+HEADERS:
+ Configuração.
+ exemplo:
+    accept-language: pt-BR, pt; q=0.9, en-US;q=0.8,en;q=0.7,gl;q=0.6
+    accept-language: 
+    pt-BR,                     
+    pt; q=0.9,                 //em ordem de prioridade
+    en-US;q=0.8,
+    en;q=0.7,
+    gl;q=0.6
+
+Request Headers e Response Headers (ambas são configurações)
+
+Request Headers
+    content-type: application/json (dizendo que vai mandar um json);
+
+(Métodos que fazem sentido enviar um Body = POST e PUT)
+Request Body
+{
+    "name": "example"
+}
+
+///Tudo acima compõe uma requisição, que vai ser processada pelo servidor///
+Na resposta do servidor ele vai retornar:
+STATUS CODE:
+200 - 299 (Sucesso)
+300 - 399 (Erro de Direct)
+400 - 499 (Erro por parte do cliente)
+500 - 599 (Erro interno no servidor)
+
+Response Headers
+
+Response Body
